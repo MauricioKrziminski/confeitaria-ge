@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
+
 import React, { useEffect, useState } from 'react'
 import { FaBars, FaShoppingCart } from 'react-icons/fa'
 import { CgClose } from 'react-icons/cg'
 import NextLink from 'next/link'
 import { Link } from 'react-scroll'
 import { useCart } from '../context/cartContext'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 
 export function Header() {
@@ -89,22 +90,50 @@ export function Header() {
           </span>
         </div>
 
-        <motion.nav
-          initial={{ x: '100%' }}
-          animate={{ x: isMenuOpen ? '0%' : '100%' }}
-          exit={{ x: '100%' }}
-          transition={{
-            type: 'spring',
-            stiffness: 200,
-            damping: 40,
-            duration: 0.7,
-            ease: 'easeInOut',
-          }}
-          className={`absolute right-0 top-full h-screen w-2/3 bg-white/90 lg:static lg:flex lg:h-auto lg:w-auto lg:bg-transparent lg:shadow-none ${
-            isMenuOpen ? 'block' : 'hidden'
-          }`}
-        >
-          <ul className="mt-36 flex h-full w-full flex-col items-center justify-start space-y-6 lg:mt-0 lg:flex lg:flex-row lg:space-x-6 lg:space-y-0 xl:mr-48">
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.nav
+              initial={{ x: '100%' }}
+              animate={{ x: '0%' }}
+              exit={{ x: '100%' }}
+              transition={{
+                type: 'spring',
+                stiffness: 200,
+                damping: 40,
+                duration: 0.7,
+                ease: 'easeInOut',
+              }}
+              className="absolute right-0 top-full h-screen w-2/3 bg-white/90 lg:hidden"
+            >
+              <ul className="mt-36 flex h-full w-full flex-col items-center justify-start space-y-6">
+                {['home', 'presentation', 'representatives', 'materials'].map(
+                  (section) => (
+                    <li key={section} className="relative">
+                      <Link
+                        to={section}
+                        onClick={() => handleLinkClick(section)}
+                        className={getIconClassName(section)}
+                        smooth={true}
+                        duration={500}
+                      >
+                        {section === 'home'
+                          ? 'Home'
+                          : section === 'presentation'
+                            ? 'Sobre'
+                            : section === 'representatives'
+                              ? 'Catálogo'
+                              : 'Feedbacks'}
+                      </Link>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+
+        <nav className="hidden lg:flex">
+          <ul className="flex items-center space-x-6 xl:mr-48">
             {['home', 'presentation', 'representatives', 'materials'].map(
               (section) => (
                 <li key={section} className="relative">
@@ -123,26 +152,24 @@ export function Header() {
                           ? 'Catálogo'
                           : 'Feedbacks'}
 
-                    {!isCartPage &&
-                      !isMenuOpen &&
-                      activeSection === section && (
-                        <motion.div
-                          layoutId="underline"
-                          className="absolute left-0 top-full mt-1 h-[3px] w-full bg-[#8D3F60]"
-                          transition={{
-                            type: 'spring',
-                            stiffness: 300,
-                            damping: 30,
-                            duration: 0.5,
-                          }}
-                        />
-                      )}
+                    {!isCartPage && activeSection === section && (
+                      <motion.div
+                        layoutId="underline"
+                        className="absolute left-0 top-full mt-1 h-[3px] w-full bg-[#8D3F60]"
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 30,
+                          duration: 0.5,
+                        }}
+                      />
+                    )}
                   </Link>
                 </li>
               ),
             )}
           </ul>
-        </motion.nav>
+        </nav>
 
         <div className="flex gap-4 md:gap-6">
           <div className="lg:hidden">
@@ -150,6 +177,7 @@ export function Header() {
               {isMenuOpen ? <CgClose size={24} /> : <FaBars size={24} />}
             </button>
           </div>
+
           <div className="relative">
             <NextLink href="/cart" passHref>
               <p className="mb-1 text-[#2B3A67] hover:text-[#8D3F60] lg:mr-10">
