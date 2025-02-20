@@ -89,8 +89,18 @@ export function Header() {
           </span>
         </div>
 
-        <nav
-          className={`absolute right-0 top-full h-screen w-4/5 bg-white/90 lg:static lg:flex lg:h-auto lg:w-auto lg:bg-transparent lg:shadow-none ${
+        <motion.nav
+          initial={{ x: '100%' }}
+          animate={{ x: isMenuOpen ? '0%' : '100%' }}
+          exit={{ x: '100%' }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 40,
+            duration: 0.7,
+            ease: 'easeInOut',
+          }}
+          className={`absolute right-0 top-full h-screen w-2/3 bg-white/90 lg:static lg:flex lg:h-auto lg:w-auto lg:bg-transparent lg:shadow-none ${
             isMenuOpen ? 'block' : 'hidden'
           }`}
         >
@@ -113,24 +123,26 @@ export function Header() {
                           ? 'Catálogo'
                           : 'Feedbacks'}
 
-                    {!isCartPage && activeSection === section && (
-                      <motion.div
-                        layoutId="underline"
-                        className="absolute left-0 top-full mt-1 h-[3px] w-full bg-[#8D3F60]"
-                        transition={{
-                          type: 'spring',
-                          stiffness: 300,
-                          damping: 30,
-                          duration: 0.5,
-                        }}
-                      />
-                    )}
+                    {!isCartPage &&
+                      !isMenuOpen &&
+                      activeSection === section && (
+                        <motion.div
+                          layoutId="underline"
+                          className="absolute left-0 top-full mt-1 h-[3px] w-full bg-[#8D3F60]"
+                          transition={{
+                            type: 'spring',
+                            stiffness: 300,
+                            damping: 30,
+                            duration: 0.5,
+                          }}
+                        />
+                      )}
                   </Link>
                 </li>
               ),
             )}
           </ul>
-        </nav>
+        </motion.nav>
 
         <div className="flex gap-4 md:gap-6">
           <div className="lg:hidden">
