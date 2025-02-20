@@ -18,7 +18,7 @@ export default function RootLayout({
     <CartProvider>
       <html lang="en" className="antialiased">
         <body className={inter.className}>
-          <link rel="icon" href="https://i.imgur.com/vXFgf59.png" sizes="any" />
+          <link rel="icon" href="/assets/LogoConfeitaria3.png" sizes="any" />
           {children}
         </body>
       </html>

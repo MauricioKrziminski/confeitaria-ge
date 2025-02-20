@@ -79,7 +79,7 @@ export function Header() {
         <div className="flex cursor-pointer items-center space-x-3 lg:ml-10">
           <NextLink href="/" onClick={() => handleLinkClick('/')}>
             <img
-              src="https://i.imgur.com/vXFgf59.png"
+              src="/assets/LogoConfeitaria3.png"
               alt="Logo"
               className="h-14 w-14 transition-transform duration-300 hover:scale-110"
             />
