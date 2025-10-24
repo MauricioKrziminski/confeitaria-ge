@@ -2,7 +2,6 @@
 'use client'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
-import { FaBirthdayCake, FaCookie, FaIceCream } from 'react-icons/fa'
 
 export function HomeSection() {
   return (
