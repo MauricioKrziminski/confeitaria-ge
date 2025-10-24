@@ -23,12 +23,7 @@ export function Header() {
   useEffect(() => {
     if (!isCartPage) {
       const handleScroll = () => {
-        const sections = [
-          'home',
-          'presentation',
-          'representatives',
-          'materials',
-        ]
+        const sections = ['home', 'presentation', 'representatives', 'contact']
         const scrollTop = window.pageYOffset + window.innerHeight / 3
 
         sections.forEach((section) => {
@@ -59,12 +54,7 @@ export function Header() {
 
   const handleLinkClick = (section?: string) => {
     setIsMenuOpen(false)
-    const homeSections = [
-      'home',
-      'presentation',
-      'representatives',
-      'materials',
-    ]
+    const homeSections = ['home', 'presentation', 'representatives', 'contact']
 
     if (homeSections.includes(section || '')) {
       if (window.location.pathname !== '/') {
@@ -106,7 +96,7 @@ export function Header() {
               className="absolute right-0 top-full h-screen w-2/3 bg-white/90 lg:hidden"
             >
               <ul className="mt-36 flex h-full w-full flex-col items-center justify-start space-y-6">
-                {['home', 'presentation', 'representatives', 'materials'].map(
+                {['home', 'presentation', 'representatives', 'contact'].map(
                   (section) => (
                     <li key={section} className="relative">
                       <Link
@@ -122,7 +112,7 @@ export function Header() {
                             ? 'Sobre'
                             : section === 'representatives'
                               ? 'Catálogo'
-                              : 'Feedbacks'}
+                              : 'Contato'}
                       </Link>
                     </li>
                   ),
@@ -134,7 +124,7 @@ export function Header() {
 
         <nav className="hidden lg:flex">
           <ul className="flex items-center space-x-6 xl:mr-48">
-            {['home', 'presentation', 'representatives', 'materials'].map(
+            {['home', 'presentation', 'representatives', 'contact'].map(
               (section) => (
                 <li key={section} className="relative">
                   <Link
@@ -150,7 +140,7 @@ export function Header() {
                         ? 'Sobre'
                         : section === 'representatives'
                           ? 'Catálogo'
-                          : 'Feedbacks'}
+                          : 'Contato'}
 
                     {!isCartPage && activeSection === section && (
                       <motion.div

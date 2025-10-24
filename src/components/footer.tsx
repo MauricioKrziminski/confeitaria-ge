@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md'
 
 export function Footer() {
   return (
-    <footer className="bg-[#FFC0CB] py-6 text-[#2B3A67]">
+    <footer className="bg-[#FF91A4] py-8 text-[#2B3A67]">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between px-6 sm:flex-row">
         <div className="mb-4 text-center sm:mb-0 sm:text-left">
           <p className="mb-2 text-lg font-semibold">Contate-nos</p>

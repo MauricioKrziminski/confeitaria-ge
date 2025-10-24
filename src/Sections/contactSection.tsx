@@ -1,55 +1,231 @@
+/* eslint-disable react/no-unescaped-entities */
+'use client'
 import { BsWhatsapp, BsInstagram } from 'react-icons/bs'
+import { MdEmail, MdLocationOn, MdAccessTime } from 'react-icons/md'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const whatsappNumber = '555194612103'
+    const message = encodeURIComponent(
+      `Olá! Meu nome é ${formData.name}.\nEmail: ${formData.email}\nMensagem: ${formData.message}`,
+    )
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
+    window.open(whatsappUrl, '_blank')
+    setFormData({ name: '', email: '', message: '' })
+  }
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
   return (
-    <div className="flex min-h-[500px] justify-center bg-[url('https://i.imgur.com/QlCR9go.png')]">
-      <div className="mx-auto my-10 flex max-w-4xl flex-col justify-center px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="mb-14 flex max-w-48 text-3xl font-bold text-white">
-              Contate-nos
-            </h2>
-            <p className="mb-4 text-white">
-              Siga-nos nas redes sociais e entre em contato conosco para mais
-              informações.
-            </p>
-            <div className="flex items-center space-x-4">
-              <a href="#" className="text-green-500 hover:text-green-600">
-                <BsWhatsapp size={24} />
-              </a>
-              <a href="#" className="text-pink-500 hover:text-pink-600">
-                <BsInstagram size={24} />
-              </a>
+    <div className="relative w-full py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="mb-4 text-center text-4xl font-bold text-[#2B3A67] drop-shadow-md"
+        >
+          Entre em Contato
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="mb-12 text-center text-lg text-[#3E497A]"
+        >
+          Estamos prontos para atendê-lo!
+        </motion.p>
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="mb-6 text-2xl font-bold text-[#2B3A67]">
+                Informações de Contato
+              </h3>
+
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#8D3F60]">
+                    <MdEmail className="text-2xl text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#2B3A67]">Email</h4>
+                    <a
+                      href="mailto:contato@confeitariadage.com"
+                      className="text-[#3E497A] hover:underline"
+                    >
+                      contato@confeitariadage.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]">
+                    <BsWhatsapp className="text-2xl text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#2B3A67]">WhatsApp</h4>
+                    <a
+                      href="https://wa.me/555194612103"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#3E497A] hover:underline"
+                    >
+                      (51) 9461-2103
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#D1919A]">
+                    <MdLocationOn className="text-2xl text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#2B3A67]">
+                      Localização
+                    </h4>
+                    <p className="text-[#3E497A]">Porto Alegre, RS</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#8D3F60]">
+                    <MdAccessTime className="text-2xl text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#2B3A67]">
+                      Horário de Atendimento
+                    </h4>
+                    <p className="text-[#3E497A]">Seg - Sáb: 9h às 18h</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 className="mb-4 text-xl font-semibold text-white">
-              Mande sua mensagem
+
+            <div>
+              <h4 className="mb-4 text-xl font-semibold text-[#2B3A67]">
+                Siga-nos nas Redes Sociais
+              </h4>
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-500 text-white transition-transform duration-300 hover:scale-110"
+                >
+                  <BsInstagram size={24} />
+                </a>
+                <a
+                  href="https://wa.me/555194612103"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white transition-transform duration-300 hover:scale-110"
+                >
+                  <BsWhatsapp size={24} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="rounded-2xl bg-white p-8 shadow-2xl"
+          >
+            <h3 className="mb-6 text-2xl font-bold text-[#2B3A67]">
+              Envie uma Mensagem
             </h3>
-            <form action="#" method="POST" className="grid grid-cols-1 gap-4">
-              <input
-                type="text"
-                placeholder="Seu Nome"
-                className="rounded-lg px-4 py-2"
-              />
-              <input
-                type="email"
-                placeholder="Seu Email"
-                className="rounded-lg px-4 py-2"
-              />
-              <textarea
-                rows={4}
-                placeholder="Sua Mensagem"
-                className="rounded-lg px-4 py-2"
-              ></textarea>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-sm font-medium text-[#2B3A67]"
+                >
+                  Nome Completo
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Seu nome"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-[#8D3F60] focus:outline-none focus:ring-2 focus:ring-[#8D3F60]/20"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm font-medium text-[#2B3A67]"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="seu@email.com"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-[#8D3F60] focus:outline-none focus:ring-2 focus:ring-[#8D3F60]/20"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm font-medium text-[#2B3A67]"
+                >
+                  Mensagem
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  placeholder="Digite sua mensagem aqui..."
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-[#8D3F60] focus:outline-none focus:ring-2 focus:ring-[#8D3F60]/20"
+                ></textarea>
+              </div>
+
               <button
                 type="submit"
-                className="rounded-lg bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+                className="w-full rounded-lg bg-gradient-to-r from-[#8D3F60] to-[#D1919A] px-6 py-3 font-bold text-white transition-all duration-200 hover:scale-105 hover:shadow-xl"
               >
-                Submit
+                Enviar Mensagem via WhatsApp
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
