@@ -65,17 +65,17 @@ export function Header() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 w-full border-b border-gray-200 bg-white/70 shadow-sm backdrop-blur-sm transition-all duration-300">
-      <div className="mx-auto flex w-full items-center justify-between p-6 lg:p-6">
+      <div className="mx-auto flex w-full items-center justify-between p-3 lg:p-4">
         {/* Logo */}
         <div className="flex cursor-pointer items-center space-x-3 lg:ml-10">
           <NextLink href="/" onClick={() => handleLinkClick('/')}>
             <img
               src="/assets/logo.png"
               alt="Logo"
-              className="mt-2 h-16 w-16 transition-transform duration-300 hover:scale-110"
+              className="mt-2 h-12 w-12 self-center transition-transform duration-300 hover:scale-110"
             />
           </NextLink>
-          <span className="cursor-default text-2xl font-semibold text-primary transition-colors duration-300 hover:text-primary-dark">
+          <span className="flex h-12 cursor-default items-center text-2xl font-semibold text-primary transition-colors duration-300 hover:text-primary-dark">
             Confeitaria da Ge
           </span>
         </div>
