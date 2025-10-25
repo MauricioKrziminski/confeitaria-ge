@@ -35,7 +35,7 @@ export function ProductsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="text-accent mb-3 text-center text-4xl font-bold drop-shadow-md lg:text-5xl"
+        className="mb-3 text-center text-4xl font-bold text-accent drop-shadow-md lg:text-5xl"
       >
         Nossos Produtos
       </motion.h1>
@@ -44,7 +44,7 @@ export function ProductsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="text-accent-light mb-12 text-center text-lg"
+        className="mb-12 text-center text-lg text-accent-light"
       >
         Delícias artesanais feitas com ingredientes selecionados
       </motion.p>
@@ -55,11 +55,11 @@ export function ProductsSection() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="border-secondary fixed left-1/2 top-40 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-lg border-2 bg-white px-6 py-4 shadow-2xl"
+            className="fixed left-1/2 top-40 z-50 -translate-x-1/2 transform whitespace-nowrap rounded-lg border-2 border-secondary bg-white px-6 py-4 shadow-2xl"
             role="alert"
           >
             <div className="flex items-center gap-3">
-              <div className="bg-secondary flex h-8 w-8 items-center justify-center rounded-full">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary">
                 <svg
                   className="h-5 w-5 text-white"
                   fill="none"
@@ -72,7 +72,7 @@ export function ProductsSection() {
                   <path d="M5 13l4 4L19 7"></path>
                 </svg>
               </div>
-              <p className="text-secondary font-medium">
+              <p className="font-medium text-secondary">
                 Produto adicionado ao carrinho!
               </p>
             </div>
@@ -81,13 +81,13 @@ export function ProductsSection() {
       </AnimatePresence>
 
       {loading && (
-        <div className="text-accent-light text-center text-lg">
+        <div className="text-center text-lg text-accent-light">
           Carregando produtos...
         </div>
       )}
 
       {!loading && products.length === 0 && (
-        <div className="text-accent-light text-center text-lg">
+        <div className="text-center text-lg text-accent-light">
           Nenhum produto cadastrado ainda. Adicione produtos no Sanity Studio!
         </div>
       )}
@@ -119,7 +119,7 @@ export function ProductsSection() {
                 />
               </div>
 
-              <h2 className="text-accent-light text-lg font-semibold">
+              <h2 className="text-lg font-semibold text-accent-light">
                 {item.name}
               </h2>
 
@@ -127,7 +127,7 @@ export function ProductsSection() {
                 {item.description}
               </p>
 
-              <p className="text-secondary mt-4 text-xl font-bold">
+              <p className="mt-4 text-xl font-bold text-secondary">
                 {item.price}
               </p>
 
@@ -135,7 +135,7 @@ export function ProductsSection() {
                 onClick={() => handleAddToCart(item)}
                 whileHover={{ scale: 1.05, transition: { duration: 0.15 } }}
                 whileTap={{ scale: 0.95, transition: { duration: 0.1 } }}
-                className="from-primary to-primary-light mt-3 w-full rounded-md bg-gradient-to-r px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:shadow-lg"
+                className="mt-3 w-full rounded-md bg-gradient-to-r from-primary to-primary-light px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:shadow-lg"
               >
                 Adicionar ao carrinho
               </motion.button>
@@ -150,7 +150,7 @@ export function ProductsSection() {
             onClick={() => setShowAll(!showAll)}
             whileHover={{ scale: 1.05, transition: { duration: 0.15 } }}
             whileTap={{ scale: 0.95, transition: { duration: 0.1 } }}
-            className="from-primary to-primary-light rounded-full bg-gradient-to-r px-8 py-3 text-lg font-medium text-white shadow-lg transition-all duration-200 hover:shadow-xl"
+            className="rounded-full bg-gradient-to-r from-primary to-primary-light px-8 py-3 text-lg font-medium text-white shadow-lg transition-all duration-200 hover:shadow-xl"
           >
             {showAll ? '← Ver menos' : 'Ver mais →'}
           </motion.button>
