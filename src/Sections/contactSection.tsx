@@ -37,7 +37,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="mb-4 text-center text-4xl font-bold text-[#2B3A67] drop-shadow-md"
+          className="text-accent mb-4 text-center text-4xl font-bold drop-shadow-md"
         >
           Entre em Contato
         </motion.h2>
@@ -46,7 +46,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="mb-12 text-center text-lg text-[#3E497A]"
+          className="text-accent-light mb-12 text-center text-lg"
         >
           Estamos prontos para atendê-lo!
         </motion.p>
@@ -61,20 +61,20 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="mb-6 text-2xl font-bold text-[#2B3A67]">
+              <h3 className="text-accent mb-6 text-2xl font-bold">
                 Informações de Contato
               </h3>
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#8D3F60]">
+                  <div className="bg-secondary mt-1 flex h-12 w-12 items-center justify-center rounded-full">
                     <MdEmail className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2B3A67]">Email</h4>
+                    <h4 className="text-accent font-semibold">Email</h4>
                     <a
                       href="mailto:contato@confeitariadage.com"
-                      className="text-[#3E497A] hover:underline"
+                      className="text-accent-light hover:underline"
                     >
                       contato@confeitariadage.com
                     </a>
@@ -86,12 +86,12 @@ export function ContactSection() {
                     <BsWhatsapp className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2B3A67]">WhatsApp</h4>
+                    <h4 className="text-accent font-semibold">WhatsApp</h4>
                     <a
                       href="https://wa.me/555194612103"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#3E497A] hover:underline"
+                      className="text-accent-light hover:underline"
                     >
                       (51) 9461-2103
                     </a>
@@ -99,33 +99,31 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#D1919A]">
+                  <div className="bg-secondary-light mt-1 flex h-12 w-12 items-center justify-center rounded-full">
                     <MdLocationOn className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2B3A67]">
-                      Localização
-                    </h4>
-                    <p className="text-[#3E497A]">Porto Alegre, RS</p>
+                    <h4 className="text-accent font-semibold">Localização</h4>
+                    <p className="text-accent-light">Porto Alegre, RS</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-[#8D3F60]">
+                  <div className="bg-secondary mt-1 flex h-12 w-12 items-center justify-center rounded-full">
                     <MdAccessTime className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2B3A67]">
+                    <h4 className="text-accent font-semibold">
                       Horário de Atendimento
                     </h4>
-                    <p className="text-[#3E497A]">Seg - Sáb: 9h às 18h</p>
+                    <p className="text-accent-light">Seg - Sáb: 9h às 18h</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="mb-4 text-xl font-semibold text-[#2B3A67]">
+              <h4 className="text-accent mb-4 text-xl font-semibold">
                 Siga-nos nas Redes Sociais
               </h4>
               <div className="flex space-x-4">
@@ -157,14 +155,14 @@ export function ContactSection() {
             viewport={{ once: false, amount: 0.3 }}
             className="rounded-2xl bg-white p-8 shadow-2xl"
           >
-            <h3 className="mb-6 text-2xl font-bold text-[#2B3A67]">
+            <h3 className="text-accent mb-6 text-2xl font-bold">
               Envie uma Mensagem
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-2 block text-sm font-medium text-[#2B3A67]"
+                  className="text-accent mb-2 block text-sm font-medium"
                 >
                   Nome Completo
                 </label>
@@ -176,14 +174,14 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="Seu nome"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-[#8D3F60] focus:outline-none focus:ring-2 focus:ring-[#8D3F60]/20"
+                  className="focus:border-secondary focus:ring-secondary/20 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-[#2B3A67]"
+                  className="text-accent mb-2 block text-sm font-medium"
                 >
                   Email
                 </label>
@@ -195,14 +193,14 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="seu@email.com"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-[#8D3F60] focus:outline-none focus:ring-2 focus:ring-[#8D3F60]/20"
+                  className="focus:border-secondary focus:ring-secondary/20 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-[#2B3A67]"
+                  className="text-accent mb-2 block text-sm font-medium"
                 >
                   Mensagem
                 </label>
@@ -214,13 +212,13 @@ export function ContactSection() {
                   required
                   rows={5}
                   placeholder="Digite sua mensagem aqui..."
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-[#8D3F60] focus:outline-none focus:ring-2 focus:ring-[#8D3F60]/20"
+                  className="focus:border-secondary focus:ring-secondary/20 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full rounded-lg bg-gradient-to-r from-[#8D3F60] to-[#D1919A] px-6 py-3 font-bold text-white transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                className="from-primary to-primary-light w-full rounded-lg bg-gradient-to-r px-6 py-3 font-bold text-white transition-all duration-200 hover:scale-105 hover:shadow-xl"
               >
                 Enviar Mensagem via WhatsApp
               </button>

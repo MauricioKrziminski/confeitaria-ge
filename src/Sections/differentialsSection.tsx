@@ -9,28 +9,28 @@ const differentials = [
     icon: FaHeart,
     title: 'Feito com Amor',
     description: 'Cada doce é preparado com carinho e dedicação para você',
-    color: '#D1919A',
+    color: '#FF6B7A',
   },
   {
     id: 2,
     icon: FaTruck,
     title: 'Entrega Rápida',
     description: 'Entregamos seus pedidos com agilidade e segurança',
-    color: '#8D3F60',
+    color: '#E84A5F',
   },
   {
     id: 3,
     icon: FaStar,
     title: 'Qualidade Premium',
     description: 'Ingredientes selecionados para garantir o melhor sabor',
-    color: '#D1919A',
+    color: '#4A90E2',
   },
   {
     id: 4,
     icon: FaLeaf,
     title: 'Produtos Frescos',
     description: 'Preparados no dia para máxima qualidade e frescor',
-    color: '#8D3F60',
+    color: '#7FBBDA',
   },
 ]
 
@@ -43,7 +43,7 @@ export function DifferentialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="mb-4 text-center text-4xl font-bold text-[#2B3A67] drop-shadow-md"
+          className="text-accent mb-4 text-center text-4xl font-bold drop-shadow-md"
         >
           Por que escolher a Confeitaria da Ge?
         </motion.h2>
@@ -52,7 +52,7 @@ export function DifferentialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="mb-12 text-center text-lg text-[#3E497A]"
+          className="text-accent-light mb-12 text-center text-lg"
         >
           Nossos diferenciais fazem toda a diferença!
         </motion.p>
@@ -74,7 +74,7 @@ export function DifferentialsSection() {
               >
                 <differential.icon className="text-4xl text-white" />
               </div>
-              <h3 className="mb-3 text-xl font-bold text-[#2B3A67]">
+              <h3 className="text-accent mb-3 text-xl font-bold">
                 {differential.title}
               </h3>
               <p className="text-sm text-gray-600">

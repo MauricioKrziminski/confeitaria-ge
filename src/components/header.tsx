@@ -48,8 +48,8 @@ export function Header() {
   }, [isCartPage])
 
   const getIconClassName = (section: string) =>
-    `relative cursor-pointer text-lg font-medium text-[#2B3A67] transition-all duration-300 ${
-      activeSection === section ? 'text-[#8D3F60]' : 'hover:text-[#8D3F60]'
+    `relative cursor-pointer text-lg font-medium text-accent transition-all duration-300 ${
+      activeSection === section ? 'text-primary' : 'hover:text-primary'
     }`
 
   const handleLinkClick = (section?: string) => {
@@ -70,12 +70,12 @@ export function Header() {
         <div className="flex cursor-pointer items-center space-x-3 lg:ml-10">
           <NextLink href="/" onClick={() => handleLinkClick('/')}>
             <img
-              src="/assets/LogoConfeitaria3.png"
+              src="/assets/logo.png"
               alt="Logo"
-              className="h-14 w-14 transition-transform duration-300 hover:scale-110"
+              className="mt-2 h-16 w-16 transition-transform duration-300 hover:scale-110"
             />
           </NextLink>
-          <span className="cursor-default text-2xl font-semibold text-[#8D3F60] transition-colors duration-300 hover:text-[#2B3A67]">
+          <span className="text-primary hover:text-primary-dark cursor-default text-2xl font-semibold transition-colors duration-300">
             Confeitaria da Ge
           </span>
         </div>
@@ -145,7 +145,7 @@ export function Header() {
                     {!isCartPage && activeSection === section && (
                       <motion.div
                         layoutId="underline"
-                        className="absolute left-0 top-full mt-1 h-[3px] w-full bg-[#8D3F60]"
+                        className="bg-primary absolute left-0 top-full mt-1 h-[3px] w-full"
                         transition={{
                           type: 'spring',
                           stiffness: 300,
@@ -170,12 +170,12 @@ export function Header() {
 
           <div className="relative">
             <NextLink href="/cart" passHref>
-              <p className="mb-1 text-[#2B3A67] hover:text-[#8D3F60] lg:mr-10">
+              <p className="text-accent hover:text-primary mb-1 lg:mr-10">
                 <FaShoppingCart size={24} />
               </p>
             </NextLink>
             {uniqueItemCount > 0 && (
-              <span className="absolute -right-3 top-3 rounded-full bg-[#8D3F60] px-1 text-xs font-bold text-white md:px-2 lg:right-6">
+              <span className="bg-primary absolute -right-3 top-3 rounded-full px-1 text-xs font-bold text-white md:px-2 lg:right-6">
                 {uniqueItemCount}
               </span>
             )}

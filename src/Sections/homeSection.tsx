@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function HomeSection() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#ADD8E6] to-[#FFC0CB] px-6 text-center lg:px-12">
+    <div className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-20 text-center lg:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export function HomeSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-4 text-5xl font-bold text-[#2B3A67] drop-shadow-lg md:text-6xl lg:text-7xl"
+          className="text-accent mb-4 text-5xl font-bold drop-shadow-lg md:text-6xl lg:text-7xl"
         >
           Confeitaria da Ge
         </motion.h1>
@@ -25,7 +25,7 @@ export function HomeSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-8 max-w-2xl text-xl font-medium text-[#3E497A] md:text-2xl"
+          className="text-accent-light mb-8 max-w-2xl text-xl font-medium md:text-2xl"
         >
           Delícias feitas com amor para adoçar seus momentos especiais! 🧁
         </motion.p>
@@ -41,7 +41,7 @@ export function HomeSection() {
             smooth={true}
             duration={500}
             offset={-70}
-            className="cursor-pointer rounded-full bg-gradient-to-r from-[#8D3F60] to-[#D1919A] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl"
+            className="from-primary to-primary-light cursor-pointer rounded-full bg-gradient-to-r px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl"
           >
             Ver Catálogo
           </Link>
@@ -50,7 +50,7 @@ export function HomeSection() {
             smooth={true}
             duration={500}
             offset={-70}
-            className="cursor-pointer rounded-full border-2 border-[#2B3A67] bg-transparent px-8 py-4 text-lg font-semibold text-[#2B3A67] shadow-md transition-all duration-200 hover:scale-105 hover:bg-[#2B3A67] hover:text-white"
+            className="border-primary text-primary hover:bg-primary cursor-pointer rounded-full border-2 bg-transparent px-8 py-4 text-lg font-semibold shadow-md transition-all duration-200 hover:scale-105 hover:text-white"
           >
             Fale Conosco
           </Link>
@@ -62,29 +62,28 @@ export function HomeSection() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="absolute bottom-32 flex w-full justify-center lg:bottom-40"
+        className="absolute bottom-20 flex w-full justify-center md:bottom-28 lg:bottom-32"
       >
-        <div className="flex h-40 w-40 items-center justify-center rounded-full bg-white shadow-2xl">
-          <img
-            src="/assets/LogoConfeitaria3.png"
-            alt="Logo Confeitaria"
-            className="h-32 w-32 object-contain"
-          />
-        </div>
+        <img
+          src="/assets/logo.png"
+          alt="Logo Confeitaria"
+          className="h-40 w-40 object-contain drop-shadow-2xl md:h-48 md:w-48 lg:h-56 lg:w-56"
+          style={{ filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3))' }}
+        />
       </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
-        className="absolute bottom-4 hidden lg:bottom-6 lg:block"
+        className="absolute bottom-6 md:bottom-8 lg:bottom-10"
       >
         <div className="flex flex-col items-center">
-          <span className="mb-2 text-sm font-medium text-[#2B3A67]">
+          <span className="text-accent mb-1 text-xs font-medium md:mb-2 lg:text-sm">
             Role para baixo
           </span>
           <svg
-            className="h-6 w-6 text-[#2B3A67]"
+            className="text-accent h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

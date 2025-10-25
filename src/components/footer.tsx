@@ -4,13 +4,13 @@ import { MdEmail } from 'react-icons/md'
 
 export function Footer() {
   return (
-    <footer className="bg-[#FF91A4] py-8 text-[#2B3A67]">
+    <footer className="bg-primary py-8 text-white">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between px-6 sm:flex-row">
         <div className="mb-4 text-center sm:mb-0 sm:text-left">
           <p className="mb-2 text-lg font-semibold">Contate-nos</p>
           <a
             href="mailto:contato@confeitariadage.com"
-            className="flex items-center justify-center text-sm text-[#3E497A] underline sm:justify-start"
+            className="flex items-center justify-center text-sm text-white/90 underline hover:text-white sm:justify-start"
           >
             <MdEmail size={20} className="mr-2" />
             contato@confeitariadage.com
@@ -24,7 +24,7 @@ export function Footer() {
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#3E497A] transition-transform duration-300 hover:scale-125"
+              className="text-white/90 transition-all duration-300 hover:scale-125 hover:text-white"
             >
               <BsInstagram size={22} />
             </a>
@@ -32,7 +32,7 @@ export function Footer() {
               href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#3E497A] transition-transform duration-300 hover:scale-125"
+              className="text-white/90 transition-all duration-300 hover:scale-125 hover:text-white"
             >
               <BsYoutube size={22} />
             </a>
@@ -40,7 +40,7 @@ export function Footer() {
               href="https://www.tiktok.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#3E497A] transition-transform duration-300 hover:scale-125"
+              className="text-white/90 transition-all duration-300 hover:scale-125 hover:text-white"
             >
               <BsTiktok size={22} />
             </a>
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mt-6 text-center text-sm text-[#3E497A]">
+      <div className="mt-6 text-center text-sm text-white/80">
         <p>Copyright © {new Date().getFullYear()} Confeitaria da Ge.</p>
         <p>Todos os direitos reservados.</p>
       </div>

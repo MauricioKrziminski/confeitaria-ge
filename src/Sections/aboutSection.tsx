@@ -14,12 +14,12 @@ export function AboutSection() {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-8 max-w-2xl lg:mb-0"
         >
-          <h2 className="mb-6 text-4xl font-bold text-[#2B3A67] drop-shadow-md lg:text-5xl">
+          <h2 className="text-accent mb-6 text-4xl font-bold drop-shadow-md lg:text-5xl">
             Feito com carinho, pensado para você! 💖
           </h2>
-          <div className="space-y-4 text-lg text-[#3E497A]">
+          <div className="text-accent-light space-y-4 text-lg">
             <p>
-              Na <strong className="text-[#8D3F60]">Confeitaria da Ge</strong>,
+              Na <strong className="text-primary">Confeitaria da Ge</strong>,
               cada doce é preparado com amor e dedicação. Usamos ingredientes de
               qualidade para garantir um sabor inesquecível e proporcionar
               momentos especiais para você e sua família.
@@ -29,16 +29,6 @@ export function AboutSection() {
               pensado para encantar! Nossa missão é transformar seus momentos
               especiais em lembranças ainda mais doces.
             </p>
-            <div className="mt-6 grid grid-cols-2 gap-4 text-center">
-              <div className="rounded-lg bg-white p-4 shadow-md">
-                <p className="text-3xl font-bold text-[#8D3F60]">100+</p>
-                <p className="text-sm text-gray-600">Clientes Felizes</p>
-              </div>
-              <div className="rounded-lg bg-white p-4 shadow-md">
-                <p className="text-3xl font-bold text-[#8D3F60]">12+</p>
-                <p className="text-sm text-gray-600">Produtos Deliciosos</p>
-              </div>
-            </div>
           </div>
         </motion.div>
 
@@ -50,10 +40,10 @@ export function AboutSection() {
           className="flex items-center justify-center lg:ml-20"
         >
           <div className="relative">
-            <div className="absolute -left-4 -top-4 h-64 w-64 rounded-lg bg-[#D1919A] opacity-50"></div>
+            <div className="bg-primary absolute -left-4 -top-4 h-64 w-64 rounded-lg opacity-50"></div>
             <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-lg bg-white shadow-2xl">
               <img
-                src="/assets/LogoConfeitaria3.png"
+                src="/assets/logo.png"
                 alt="Confeitaria da Ge"
                 className="h-48 w-48 object-contain"
               />
