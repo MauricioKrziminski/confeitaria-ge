@@ -32,7 +32,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     })
   }
 
-  const removeFromCart = (itemId: number, removeAll: boolean) => {
+  const removeFromCart = (itemId: string | number, removeAll: boolean) => {
     setCartItems((prevItems: CartItem[]) => {
       if (removeAll) {
         return prevItems.filter((item) => item.id !== itemId)
