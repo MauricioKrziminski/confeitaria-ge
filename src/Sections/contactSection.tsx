@@ -37,7 +37,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-accent mb-4 text-center text-4xl font-bold drop-shadow-md"
+          className="mb-4 text-center text-4xl font-bold text-accent drop-shadow-md"
         >
           Entre em Contato
         </motion.h2>
@@ -46,7 +46,7 @@ export function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-accent-light mb-12 text-center text-lg"
+          className="mb-12 text-center text-lg text-accent-light"
         >
           Estamos prontos para atendê-lo!
         </motion.p>
@@ -61,17 +61,17 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-accent mb-6 text-2xl font-bold">
+              <h3 className="mb-6 text-2xl font-bold text-accent">
                 Informações de Contato
               </h3>
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-secondary mt-1 flex h-12 w-12 items-center justify-center rounded-full">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
                     <MdEmail className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="text-accent font-semibold">Email</h4>
+                    <h4 className="font-semibold text-accent">Email</h4>
                     <a
                       href="mailto:contato@confeitariadage.com"
                       className="text-accent-light hover:underline"
@@ -86,7 +86,7 @@ export function ContactSection() {
                     <BsWhatsapp className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="text-accent font-semibold">WhatsApp</h4>
+                    <h4 className="font-semibold text-accent">WhatsApp</h4>
                     <a
                       href="https://wa.me/555194612103"
                       target="_blank"
@@ -99,21 +99,21 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-secondary-light mt-1 flex h-12 w-12 items-center justify-center rounded-full">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-secondary-light">
                     <MdLocationOn className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="text-accent font-semibold">Localização</h4>
+                    <h4 className="font-semibold text-accent">Localização</h4>
                     <p className="text-accent-light">Porto Alegre, RS</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-secondary mt-1 flex h-12 w-12 items-center justify-center rounded-full">
+                  <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
                     <MdAccessTime className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h4 className="text-accent font-semibold">
+                    <h4 className="font-semibold text-accent">
                       Horário de Atendimento
                     </h4>
                     <p className="text-accent-light">Seg - Sáb: 9h às 18h</p>
@@ -123,7 +123,7 @@ export function ContactSection() {
             </div>
 
             <div>
-              <h4 className="text-accent mb-4 text-xl font-semibold">
+              <h4 className="mb-4 text-xl font-semibold text-accent">
                 Siga-nos nas Redes Sociais
               </h4>
               <div className="flex space-x-4">
@@ -155,14 +155,14 @@ export function ContactSection() {
             viewport={{ once: false, amount: 0.3 }}
             className="rounded-2xl bg-white p-8 shadow-2xl"
           >
-            <h3 className="text-accent mb-6 text-2xl font-bold">
+            <h3 className="mb-6 text-2xl font-bold text-accent">
               Envie uma Mensagem
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="text-accent mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium text-accent"
                 >
                   Nome Completo
                 </label>
@@ -174,14 +174,14 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="Seu nome"
-                  className="focus:border-secondary focus:ring-secondary/20 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="text-accent mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium text-accent"
                 >
                   Email
                 </label>
@@ -193,14 +193,14 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="seu@email.com"
-                  className="focus:border-secondary focus:ring-secondary/20 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="text-accent mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium text-accent"
                 >
                   Mensagem
                 </label>
@@ -212,13 +212,13 @@ export function ContactSection() {
                   required
                   rows={5}
                   placeholder="Digite sua mensagem aqui..."
-                  className="focus:border-secondary focus:ring-secondary/20 w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="from-primary to-primary-light w-full rounded-lg bg-gradient-to-r px-6 py-3 font-bold text-white transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                className="w-full rounded-lg bg-gradient-to-r from-primary to-primary-light px-6 py-3 font-bold text-white transition-all duration-200 hover:scale-105 hover:shadow-xl"
               >
                 Enviar Mensagem via WhatsApp
               </button>

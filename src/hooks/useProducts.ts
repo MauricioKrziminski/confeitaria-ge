@@ -31,7 +31,7 @@ export function useProducts() {
           image,
           order
         }`
-        
+
         const data = await client.fetch(query)
         setProducts(data)
       } catch (error) {

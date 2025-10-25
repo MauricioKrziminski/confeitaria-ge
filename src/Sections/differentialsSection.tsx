@@ -43,7 +43,7 @@ export function DifferentialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-accent mb-4 text-center text-4xl font-bold drop-shadow-md"
+          className="mb-4 text-center text-4xl font-bold text-accent drop-shadow-md"
         >
           Por que escolher a Confeitaria da Ge?
         </motion.h2>
@@ -52,7 +52,7 @@ export function DifferentialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-accent-light mb-12 text-center text-lg"
+          className="mb-12 text-center text-lg text-accent-light"
         >
           Nossos diferenciais fazem toda a diferença!
         </motion.p>
@@ -74,7 +74,7 @@ export function DifferentialsSection() {
               >
                 <differential.icon className="text-4xl text-white" />
               </div>
-              <h3 className="text-accent mb-3 text-xl font-bold">
+              <h3 className="mb-3 text-xl font-bold text-accent">
                 {differential.title}
               </h3>
               <p className="text-sm text-gray-600">

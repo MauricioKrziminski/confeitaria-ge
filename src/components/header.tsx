@@ -75,7 +75,7 @@ export function Header() {
               className="mt-2 h-16 w-16 transition-transform duration-300 hover:scale-110"
             />
           </NextLink>
-          <span className="text-primary hover:text-primary-dark cursor-default text-2xl font-semibold transition-colors duration-300">
+          <span className="cursor-default text-2xl font-semibold text-primary transition-colors duration-300 hover:text-primary-dark">
             Confeitaria da Ge
           </span>
         </div>
@@ -145,7 +145,7 @@ export function Header() {
                     {!isCartPage && activeSection === section && (
                       <motion.div
                         layoutId="underline"
-                        className="bg-primary absolute left-0 top-full mt-1 h-[3px] w-full"
+                        className="absolute left-0 top-full mt-1 h-[3px] w-full bg-primary"
                         transition={{
                           type: 'spring',
                           stiffness: 300,
@@ -170,12 +170,12 @@ export function Header() {
 
           <div className="relative">
             <NextLink href="/cart" passHref>
-              <p className="text-accent hover:text-primary mb-1 lg:mr-10">
+              <p className="mb-1 text-accent hover:text-primary lg:mr-10">
                 <FaShoppingCart size={24} />
               </p>
             </NextLink>
             {uniqueItemCount > 0 && (
-              <span className="bg-primary absolute -right-3 top-3 rounded-full px-1 text-xs font-bold text-white md:px-2 lg:right-6">
+              <span className="absolute -right-3 top-3 rounded-full bg-primary px-1 text-xs font-bold text-white md:px-2 lg:right-6">
                 {uniqueItemCount}
               </span>
             )}

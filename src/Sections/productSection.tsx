@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useCart } from '../context/cartContext'
 import { CartItem } from '@/types/cartTypes'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useProducts } from '@/hooks/useProducts'
+import { useProducts, Product } from '@/hooks/useProducts'
 import { urlFor } from '@/lib/sanity'
 
 export function ProductsSection() {
@@ -13,7 +13,7 @@ export function ProductsSection() {
   const [showAll, setShowAll] = useState(false)
   const { products, loading } = useProducts()
 
-  const handleAddToCart = (item: any) => {
+  const handleAddToCart = (item: Product) => {
     const cartItem: Omit<CartItem, 'quantity'> = {
       id: item._id,
       name: item.name,

@@ -43,7 +43,7 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-accent mb-4 text-center text-4xl font-bold drop-shadow-md"
+          className="mb-4 text-center text-4xl font-bold text-accent drop-shadow-md"
         >
           Como Funciona?
         </motion.h2>
@@ -52,14 +52,14 @@ export function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="text-accent-light mb-16 text-center text-lg"
+          className="mb-16 text-center text-lg text-accent-light"
         >
           É muito fácil fazer seu pedido!
         </motion.p>
 
         <div className="relative">
           {/* Linha conectora */}
-          <div className="from-primary to-secondary absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 transform bg-gradient-to-b lg:block"></div>
+          <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 transform bg-gradient-to-b from-primary to-secondary lg:block"></div>
 
           <div className="space-y-12">
             {steps.map((step, index) => (
@@ -79,7 +79,7 @@ export function HowItWorksSection() {
                   }`}
                 >
                   <div className="rounded-xl bg-gradient-to-br from-[#E8F4FA] to-white p-6 shadow-lg">
-                    <h3 className="text-accent mb-3 text-2xl font-bold">
+                    <h3 className="mb-3 text-2xl font-bold text-accent">
                       {step.title}
                     </h3>
                     <p className="text-gray-600">{step.description}</p>
@@ -94,7 +94,7 @@ export function HowItWorksSection() {
                   >
                     <step.icon className="text-3xl text-white lg:text-4xl" />
                   </div>
-                  <div className="text-accent absolute -bottom-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg font-bold shadow-md">
+                  <div className="absolute -bottom-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg font-bold text-accent shadow-md">
                     {step.id}
                   </div>
                 </div>

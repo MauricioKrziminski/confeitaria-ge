@@ -33,7 +33,7 @@ export default function Home() {
       <main className="overflow-x-hidden">
         <section
           id="home"
-          className="from-primary via-primary-light relative overflow-hidden bg-gradient-to-br to-[#B3D9F2] py-20"
+          className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-light to-[#B3D9F2] py-20"
         >
           <HomeSection />
           <div className="relative w-full overflow-hidden">

@@ -119,7 +119,7 @@ const Cart: React.FC = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={handleWhatsAppRedirect}
-                    className="bg-secondary hover:bg-secondary-dark mt-2 rounded-lg px-6 py-2 font-bold text-white transition-colors duration-200"
+                    className="mt-2 rounded-lg bg-secondary px-6 py-2 font-bold text-white transition-colors duration-200 hover:bg-secondary-dark"
                   >
                     Finalizar compra
                   </button>

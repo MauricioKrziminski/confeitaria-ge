@@ -16,7 +16,7 @@ export function HomeSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-accent mb-4 text-5xl font-bold drop-shadow-lg md:text-6xl lg:text-7xl"
+          className="mb-4 text-5xl font-bold text-accent drop-shadow-lg md:text-6xl lg:text-7xl"
         >
           Confeitaria da Ge
         </motion.h1>
@@ -25,7 +25,7 @@ export function HomeSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-accent-light mb-8 max-w-2xl text-xl font-medium md:text-2xl"
+          className="mb-8 max-w-2xl text-xl font-medium text-accent-light md:text-2xl"
         >
           Delícias feitas com amor para adoçar seus momentos especiais! 🧁
         </motion.p>
@@ -41,7 +41,7 @@ export function HomeSection() {
             smooth={true}
             duration={500}
             offset={-70}
-            className="from-primary to-primary-light cursor-pointer rounded-full bg-gradient-to-r px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl"
+            className="cursor-pointer rounded-full bg-gradient-to-r from-primary to-primary-light px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl"
           >
             Ver Catálogo
           </Link>
@@ -50,7 +50,7 @@ export function HomeSection() {
             smooth={true}
             duration={500}
             offset={-70}
-            className="border-primary text-primary hover:bg-primary cursor-pointer rounded-full border-2 bg-transparent px-8 py-4 text-lg font-semibold shadow-md transition-all duration-200 hover:scale-105 hover:text-white"
+            className="cursor-pointer rounded-full border-2 border-primary bg-transparent px-8 py-4 text-lg font-semibold text-primary shadow-md transition-all duration-200 hover:scale-105 hover:bg-primary hover:text-white"
           >
             Fale Conosco
           </Link>
@@ -79,11 +79,11 @@ export function HomeSection() {
         className="absolute bottom-6 md:bottom-8 lg:bottom-10"
       >
         <div className="flex flex-col items-center">
-          <span className="text-accent mb-1 text-xs font-medium md:mb-2 lg:text-sm">
+          <span className="mb-1 text-xs font-medium text-accent md:mb-2 lg:text-sm">
             Role para baixo
           </span>
           <svg
-            className="text-accent h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6"
+            className="h-4 w-4 text-accent md:h-5 md:w-5 lg:h-6 lg:w-6"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

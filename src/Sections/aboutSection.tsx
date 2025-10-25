@@ -14,10 +14,10 @@ export function AboutSection() {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-8 max-w-2xl lg:mb-0"
         >
-          <h2 className="text-accent mb-6 text-4xl font-bold drop-shadow-md lg:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold text-accent drop-shadow-md lg:text-5xl">
             Feito com carinho, pensado para você! 💖
           </h2>
-          <div className="text-accent-light space-y-4 text-lg">
+          <div className="space-y-4 text-lg text-accent-light">
             <p>
               Na <strong className="text-primary">Confeitaria da Ge</strong>,
               cada doce é preparado com amor e dedicação. Usamos ingredientes de
@@ -40,7 +40,7 @@ export function AboutSection() {
           className="flex items-center justify-center lg:ml-20"
         >
           <div className="relative">
-            <div className="bg-primary absolute -left-4 -top-4 h-64 w-64 rounded-lg opacity-50"></div>
+            <div className="absolute -left-4 -top-4 h-64 w-64 rounded-lg bg-primary opacity-50"></div>
             <div className="relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-lg bg-white shadow-2xl">
               <img
                 src="/assets/logo.png"
