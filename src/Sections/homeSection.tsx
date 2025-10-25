@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function HomeSection() {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-20 text-center lg:px-12">
+    <div className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-4 text-center lg:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export function HomeSection() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="absolute bottom-20 flex w-full justify-center md:bottom-28 lg:bottom-32"
+        className="absolute bottom-6 flex w-full justify-center md:bottom-28 lg:bottom-32"
       >
         <img
           src="/assets/logo.png"
@@ -79,7 +79,7 @@ export function HomeSection() {
         className="absolute bottom-6 md:bottom-8 lg:bottom-10"
       >
         <div className="flex flex-col items-center">
-          <span className="mb-1 text-xs font-medium text-accent md:mb-2 lg:text-sm">
+          <span className="text-xs font-medium text-accent md:mb-2 lg:text-sm">
             Role para baixo
           </span>
           <svg
